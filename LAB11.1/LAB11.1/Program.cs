@@ -52,12 +52,12 @@ class Product
 }
 class SuperProduct : Product
 {
-    public double year;
-    public double cyear;
+    private double year;
+    private double cyear;
     public SuperProduct(string? _name, double _price, double _count, double _year, double _cyear) : base(_name, _price, _count)
     {
-        year = _year;
-        cyear = _cyear;
+        this.year = _year;
+        this.cyear = _cyear;
     }
     public double Year
     {
@@ -79,4 +79,5 @@ class SuperProduct : Product
             $", количеством в {Count} и годом выпуска {year} - "+ 
             $"имеет качество:{Quality():F2}";
     }
+
 }   
